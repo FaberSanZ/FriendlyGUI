@@ -6,7 +6,7 @@ FriendlyGUI is a lightweight, game-first retained UI layer built on top of the *
 
 It is **not** a wrapper around ImGui widgets.
 
-FriendlyGUI gives you retained controls, layouts, styles, events, drag/drop, gamepad-friendly navigation, inventory UI, optional XAML-style authoring, and optional advanced input while still using the ImGui renderer your engine already ships with.
+FriendlyGUI gives you retained controls, layouts, styles, events, drag/drop, gamepad-friendly navigation, inventory UI, optional XAML-style authoring, Event System: Bubble, Tunnel and Direct Events, and optional advanced input while still using the ImGui renderer your engine already ships with.
 
 > If Dear ImGui works in your engine, FriendlyGUI can work there too.
 
@@ -687,6 +687,373 @@ Then:
 ```
 
 ---
+
+## Event System: Bubble, Tunnel and Direct Events
+
+FriendlyGUI includes a game-ready event system inspired by modern retained UI frameworks.
+
+Events can be routed through the visual tree using different strategies:
+
+```cpp
+enum class RoutingStrategy
+{
+    Direct,
+    Bubble,
+    Tunnel
+};
+```
+
+### Event routing modes
+
+| Mode | Description |
+|---|---|
+| `Direct` | The event is handled only by the target element. |
+| `Bubble` | The event starts at the target and bubbles up through its parents. |
+| `Tunnel` | The event starts at the root and travels down toward the target. |
+
+This makes it possible to handle input at different levels of the UI tree.
+
+```cpp
+button->OnClick = []()
+{
+    // Local button action
+};
+
+panel->AddHandler(FyGUI::EventKind::PointerPressed, [](FyGUI::EventArgs& args)
+{
+    // Parent panel can react to child pointer events.
+});
+```
+
+Useful for:
+
+```txt
+Menus
+Modal dialogs
+Inventory grids
+Drag/drop
+Tooltips
+Global shortcuts
+Gamepad navigation
+Custom controls
+```
+
+---
+
+## Root Controls
+
+FriendlyGUI is built around a retained root element.
+
+A `Context` owns and updates one root control:
+
+```cpp
+FyGUI::Context gui;
+
+auto root = std::make_shared<FyGUI::Canvas>();
+gui.SetRoot(root);
+```
+
+The root can be any `UIElement`, but common root choices are:
+
+```txt
+Canvas
+StackPanel
+Grid
+Border
+NavigationView
+Custom root control
+```
+
+Example:
+
+```cpp
+auto root = std::make_shared<FyGUI::Canvas>();
+root->Width = 1280.0f;
+root->Height = 720.0f;
+
+auto button = std::make_shared<FyGUI::Button>();
+button->Content = "Play";
+button->Width = 240.0f;
+button->Height = 48.0f;
+
+root->AddChild(button);
+gui.SetRoot(root);
+```
+
+Frame flow:
+
+```cpp
+gui.Update(input, { width, height }, deltaTime);
+gui.Render(*ImGui::GetBackgroundDrawList());
+```
+
+---
+
+## Custom Controls
+
+FriendlyGUI is designed so developers can create their own game controls.
+
+Every control derives from `UIElement` or `Control`:
+
+```cpp
+class HealthBar : public FyGUI::Control
+{
+public:
+    float Value = 1.0f;
+
+    FyGUI::Vec2 Measure(FyGUI::Vec2 available) override
+    {
+        return { 240.0f, 24.0f };
+    }
+
+    void Arrange(FyGUI::Rect finalRect) override
+    {
+        VisualBounds = finalRect;
+    }
+
+    void Render(ImDrawList& drawList) override
+    {
+        const auto rect = VisualBounds;
+
+        drawList.AddRectFilled(
+            { rect.Left(), rect.Top() },
+            { rect.Right(), rect.Bottom() },
+            FyGUI::Color{ 0.08f, 0.08f, 0.10f, 1.0f }.ToU32(),
+            6.0f
+        );
+
+        const float fillWidth = rect.width * std::clamp(Value, 0.0f, 1.0f);
+
+        drawList.AddRectFilled(
+            { rect.Left(), rect.Top() },
+            { rect.Left() + fillWidth, rect.Bottom() },
+            FyGUI::Color{ 0.9f, 0.12f, 0.18f, 1.0f }.ToU32(),
+            6.0f
+        );
+    }
+};
+```
+
+Custom controls can reuse:
+
+```txt
+Layout
+Events
+Focus
+Hover/pressed state
+Styles
+Pointer input
+Gamepad navigation
+XAML registration
+ImDrawList rendering
+```
+
+---
+
+## Visual States
+
+Controls can react to common retained UI states:
+
+```cpp
+enum class VisualState
+{
+    Normal,
+    PointerOver,
+    Pressed,
+    Disabled,
+    Focused,
+    Checked,
+    Selected
+};
+```
+
+These states allow controls and styles to respond consistently to user interaction.
+
+Examples:
+
+```txt
+Button hover
+Button pressed
+Inventory slot selected
+ListBox item focused
+CheckBox checked
+Disabled controls
+Gamepad focus ring
+```
+
+---
+
+## Game-Ready Focus System
+
+FriendlyGUI supports keyboard and gamepad-friendly focus navigation.
+
+Controls can opt into focus using:
+
+```cpp
+button->IsTabStop = true;
+```
+
+Focused controls can react visually through styles, focus rings, or custom rendering.
+
+This is especially useful for:
+
+```txt
+Console menus
+Inventory screens
+Settings panels
+Radial menus
+Hotbars
+Dialog boxes
+Gamepad navigation
+```
+
+---
+
+## Optional Input Layer
+
+FriendlyGUI can use ImGui input by default, or a richer optional input layer.
+
+### ImGui input mode
+
+Best for fast integration:
+
+```cpp
+gui.UpdateAndRenderFromImGui(ImGui::GetBackgroundDrawList(), { width, height }, deltaTime);
+```
+
+### FriendlyInput mode
+
+Best for games that need deeper control:
+
+```cpp
+FyGUI::InputBuilder inputBuilder;
+
+inputBuilder.BeginFrame(deltaTime);
+inputBuilder.SetPointerPosition({ mouseX, mouseY });
+inputBuilder.SetMouseButton(FyGUI::MouseButton::Left, mouseDown);
+inputBuilder.SetGamepadConnected(true);
+inputBuilder.SetGamepadButton(FyGUI::GamepadButton::FaceDown, aPressed);
+
+FyGUI::InputSnapshot input = inputBuilder.EndFrame();
+
+gui.Update(input, { width, height }, deltaTime);
+gui.Render(*ImGui::GetBackgroundDrawList());
+```
+
+FriendlyInput supports:
+
+```txt
+Mouse
+Keyboard
+Text input
+Gamepad buttons
+Gamepad axes
+Navigation repeat
+Xbox / PlayStation / Switch glyph mapping
+Custom engine input
+```
+
+---
+
+## XAML Is Optional
+
+FriendlyGUI can be used fully from C++, or with XAML-style declarative UI.
+
+### C++ only
+
+```cpp
+auto button = std::make_shared<FyGUI::Button>();
+button->Content = "Start Game";
+button->OnClick = []()
+{
+    StartGame();
+};
+```
+
+### XAML
+
+```xml
+<Button Content="Start Game"
+        Width="260"
+        Height="48"
+        Style="{StaticResource PrimaryButton}"
+        OnClick="StartGame" />
+```
+
+This allows developers to choose their workflow:
+
+```txt
+C++ only for engine/game code
+XAML for menus/screens/styles
+Both together for production workflows
+```
+
+---
+
+## Retained UI Over ImGui Drawing
+
+FriendlyGUI is not a wrapper over ImGui widgets.
+
+It does **not** use:
+
+```txt
+ImGui::Button
+ImGui::Slider
+ImGui::Checkbox
+ImGui::Begin / End as UI layout
+```
+
+Instead, FriendlyGUI uses its own retained control tree and renders through `ImDrawList`.
+
+```txt
+FriendlyGUI:
+  Controls
+  Layout
+  Events
+  Styles
+  XAML
+  Gamepad navigation
+  Inventory systems
+
+Dear ImGui:
+  ImDrawList
+  Font atlas
+  Renderer backend
+```
+
+That means:
+
+> If your engine already renders ImGui, it can render FriendlyGUI.
+
+---
+
+## Why FriendlyGUI Exists
+
+Dear ImGui is excellent for tools and debug UI.
+
+FriendlyGUI adds a retained, game-focused layer on top:
+
+```txt
+Main menus
+Pause menus
+HUDs
+Settings screens
+Inventory screens
+Hotbars
+Radial menus
+Dialog boxes
+Gamepad-first UI
+XAML-driven screens
+```
+
+The goal is simple:
+
+> Keep ImGui’s portability and rendering ecosystem, but add a retained UI model designed for games.
+
+
+---
+
+
 
 ## Text Rendering
 
