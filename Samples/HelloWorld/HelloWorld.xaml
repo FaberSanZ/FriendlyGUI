@@ -1,0 +1,10 @@
+<Canvas Width="1280" Height="720" Background="#FAF9F8FF">
+    <TextBlock x:Name="HelloText"
+               Canvas.Left="72"
+               Canvas.Top="96"
+               Width="900"
+               Text="Hello FriendlyGUI"
+               FontSize="54"
+               Foreground="#0078D4"
+               TextWrapping="NoWrap" />
+</Canvas>

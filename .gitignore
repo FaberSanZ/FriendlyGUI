@@ -1,31 +1,31 @@
-(
-echo .vs/
-echo **/.vs/
-echo bin/
-echo **/bin/
-echo obj/
-echo **/obj/
-echo x64/
-echo **/x64/
-echo x86/
-echo **/x86/
-echo Debug/
-echo **/Debug/
-echo Release/
-echo **/Release/
-echo build/
-echo **/build/
-echo out/
-echo **/out/
-echo External/
-echo *.user
-echo *.suo
-echo *.VC.db
-echo *.VC.opendb
-echo *.opendb
-echo *.ipch
-echo *.vsidx
-echo *.pdb
-echo *.ilk
-echo *.exe
-) > .gitignore
+.vs/
+**/.vs/
+Build/
+**/Build/
+bin/
+**/bin/
+obj/
+**/obj/
+x64/
+**/x64/
+x86/
+**/x86/
+Debug/
+**/Debug/
+Release/
+**/Release/
+build/
+**/build/
+out/
+**/out/
+External/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+*.opendb
+*.ipch
+*.vsidx
+*.pdb
+*.ilk
+*.exe
