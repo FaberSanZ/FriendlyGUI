@@ -1,5 +1,10 @@
 # FriendlyGUI
 
+
+<p align="center">
+  <img src="Screenshots/sample.gif" width="600" alt="Demostración centrada">
+</p>
+
 **Retained game UI for Dear ImGui.**
 
 FriendlyGUI is a lightweight, game-first retained UI layer built on top of the **Dear ImGui drawing backend** most custom engines already have.
