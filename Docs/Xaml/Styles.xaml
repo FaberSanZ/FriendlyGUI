@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<ResourceDictionary>
+    <Style x:Key="ShellPanel" TargetType="Border">
+        <Setter Property="Background" Value="#07111DEA" />
+        <Setter Property="BorderBrush" Value="#6BA0CCAA" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="16" />
+        <Setter Property="Padding" Value="22" />
+    </Style>
+
+    <Style x:Key="CardPanel" TargetType="Border">
+        <Setter Property="Background" Value="#02070CCC" />
+        <Setter Property="BorderBrush" Value="#5CAAE0AA" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="12" />
+        <Setter Property="Padding" Value="16" />
+    </Style>
+
+    <Style x:Key="PrimaryButton" TargetType="Button">
+        <Setter Property="Background" Value="#182230" />
+        <Setter Property="Foreground" Value="#F0F7FF" />
+        <Setter Property="BorderBrush" Value="#6BA0CC" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+
+    <Style x:Key="AccentButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#0078D4" />
+        <Setter Property="Foreground" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#006CBE" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4" />
+    </Style>
+
+    <Style x:Key="DangerButton" TargetType="Button">
+        <Setter Property="Background" Value="#3B171B" />
+        <Setter Property="Foreground" Value="#FFEDEE" />
+        <Setter Property="BorderBrush" Value="#FF7A7A" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+
+    <Style x:Key="MutedButton" TargetType="Button">
+        <Setter Property="Background" Value="#111820" />
+        <Setter Property="Foreground" Value="#C9D7E8" />
+        <Setter Property="BorderBrush" Value="#405A73" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+
+    <Style x:Key="HangarButton" TargetType="Button">
+        <Setter Property="Background" Value="#182230" />
+        <Setter Property="Foreground" Value="#F0F7FF" />
+        <Setter Property="BorderBrush" Value="#76BCECAA" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="BackgroundImage" Value="button_grey" />
+        <Setter Property="HoverImage" Value="button_grey_close" />
+        <Setter Property="PressedImage" Value="button_red" />
+    </Style>
+
+    <Style x:Key="HangarDangerButton" TargetType="Button">
+        <Setter Property="Background" Value="#3B171B" />
+        <Setter Property="Foreground" Value="#FFEDEE" />
+        <Setter Property="BorderBrush" Value="#FF7A7A" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="BackgroundImage" Value="button_red" />
+        <Setter Property="HoverImage" Value="button_red_close" />
+        <Setter Property="PressedImage" Value="button_red_close" />
+    </Style>
+
+    <Style x:Key="SciFiInventoryGrid" TargetType="InventoryGrid">
+        <Setter Property="Background" Value="#050A10E8" />
+        <Setter Property="Foreground" Value="#EAF7FFFF" />
+        <Setter Property="BorderBrush" Value="#5CAAE0AA" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="10" />
+    </Style>
+
+    <Style x:Key="TacticalListBox" TargetType="ListBox">
+        <Setter Property="Background" Value="#081018D8" />
+        <Setter Property="Foreground" Value="#EAF7FFFF" />
+        <Setter Property="BorderBrush" Value="#6BA0CCAA" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+
+    <Style x:Key="MinimalSlider" TargetType="Slider">
+        <Setter Property="Background" Value="#263241" />
+        <Setter Property="Foreground" Value="#52C6F6" />
+        <Setter Property="BorderBrush" Value="#7A8DA1" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4" />
+    </Style>
+
+    <Style x:Key="SciFiSlider" TargetType="Slider">
+        <Setter Property="Background" Value="#0E1A28" />
+        <Setter Property="Foreground" Value="#52C6F6" />
+        <Setter Property="BorderBrush" Value="#5CAAE0AA" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="6" />
+    </Style>
+
+    <Style x:Key="TacticalSlider" TargetType="Slider">
+        <Setter Property="Background" Value="#17220F" />
+        <Setter Property="Foreground" Value="#87D861" />
+        <Setter Property="BorderBrush" Value="#7EB66A" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4" />
+    </Style>
+
+    <Style x:Key="SciFiProgressBar" TargetType="ProgressBar">
+        <Setter Property="Background" Value="#0E1A28" />
+        <Setter Property="Foreground" Value="#67D2FFFF" />
+        <Setter Property="BorderBrush" Value="#5CAAE0AA" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+
+    <Style x:Key="MinimalCheckBox" TargetType="CheckBox">
+        <Setter Property="Foreground" Value="#EAF7FFFF" />
+        <Setter Property="BorderBrush" Value="#7A8DA1" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4" />
+    </Style>
+</ResourceDictionary>

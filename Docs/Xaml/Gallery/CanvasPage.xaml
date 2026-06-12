@@ -1,0 +1,25 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="Canvas" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use Canvas to position child elements with Canvas.Left and Canvas.Top attached properties." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A Canvas control" SourceCodeText="Source code" MinExampleHeight="260">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="28">
+                <Canvas x:Name="Control1" Width="140" Height="140" Background="#808080" VerticalAlignment="Top">
+                    <Rectangle x:Name="CanvasRedRectangle" Canvas.Left="0" Canvas.Top="0" Canvas.ZIndex="0" Width="40" Height="40" Fill="#E81123" />
+                    <Rectangle Canvas.Left="20" Canvas.Top="20" Canvas.ZIndex="1" Width="40" Height="40" Fill="#0078D4" />
+                    <Rectangle Canvas.Left="40" Canvas.Top="40" Canvas.ZIndex="2" Width="40" Height="40" Fill="#107C10" />
+                    <Rectangle Canvas.Left="60" Canvas.Top="60" Canvas.ZIndex="3" Width="40" Height="40" Fill="#FFFF00" />
+                </Canvas>
+
+                <StackPanel Orientation="Horizontal" Spacing="16">
+                    <Slider x:Name="TopSlider" Height="110" Header="Canvas.Top" Minimum="0" Maximum="100" StepFrequency="1" Orientation="Vertical" IsDirectionReversed="True" OnValueChanged="CanvasTopSlider_ValueChanged" />
+                    <StackPanel Width="160" Spacing="12">
+                        <Slider x:Name="LeftSlider" Width="100" Header="Canvas.Left" Minimum="0" Maximum="100" StepFrequency="1" OnValueChanged="CanvasLeftSlider_ValueChanged" />
+                        <Slider x:Name="ZSlider" Width="100" Header="Canvas.ZIndex" Minimum="0" Maximum="4" StepFrequency="1" OnValueChanged="CanvasZIndexSlider_ValueChanged" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

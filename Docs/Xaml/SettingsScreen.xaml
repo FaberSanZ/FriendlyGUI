@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Canvas Width="1280" Height="720" Background="#00000000">
+    <Border Style="{StaticResource ShellPanel}"
+            Canvas.Left="300"
+            Canvas.Top="86"
+            Width="680"
+            Height="548">
+
+        <StackPanel Orientation="Vertical" Spacing="14">
+            <TextBlock Text="SETTINGS / INPUT LAB" Foreground="#B0F2FFFF" />
+            <TextBlock Text="A settings screen authored in FriendlyXAML. Sliders and progress bars animate from their loaded values."
+                       Foreground="#DDE8F6FF"
+                       Width="600"
+                       TextWrapping="Wrap" />
+
+            <Border Style="{StaticResource CardPanel}" Width="610" Height="285">
+                <StackPanel Orientation="Vertical" Spacing="12">
+                    <TextBlock Text="Master Volume" Foreground="#DDE8F6FF" />
+                    <Slider Style="{StaticResource MinimalSlider}" Width="520" Minimum="0" Maximum="100" Value="72" />
+                    <TextBlock Text="HUD Scale" Foreground="#DDE8F6FF" />
+                    <Slider Style="{StaticResource SciFiSlider}" Width="520" Minimum="50" Maximum="150" Value="105" />
+                    <TextBlock Text="Aim Assist" Foreground="#DDE8F6FF" />
+                    <Slider Style="{StaticResource TacticalSlider}" Width="520" Minimum="0" Maximum="100" Value="38" />
+                    <TextBlock Text="Shield Calibration" Foreground="#DDE8F6FF" />
+                    <ProgressBar Style="{StaticResource SciFiProgressBar}" Width="520" Height="18" Minimum="0" Maximum="1" Value="0.82" Foreground="#67D2FFFF" />
+                </StackPanel>
+            </Border>
+
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <CheckBox Content="Fullscreen" Style="{StaticResource MinimalCheckBox}" IsChecked="true" Width="180" Height="34" />
+                <CheckBox Content="Subtitles" Style="{StaticResource MinimalCheckBox}" IsChecked="true" Width="180" Height="34" />
+                <Button Content="Apply" Style="{StaticResource PrimaryButton}" Width="160" Height="38" OnClick="ApplySettings" />
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Canvas>

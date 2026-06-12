@@ -1,0 +1,36 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="RadialMenu" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use RadialMenu or CommandWheel for fast gamepad-friendly command selection. This control is FriendlyGUI game-first, but it still uses the retained layout, focus and event system." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A command wheel with selectable slices" SourceCodeText="Source code" MinExampleHeight="360">
+        <ControlExample.Example>
+            <Canvas Width="560" Height="330" Background="#FFFFFF">
+                <CommandWheel x:Name="CommandWheelSample"
+                              Canvas.Left="120"
+                              Canvas.Top="18"
+                              Width="292"
+                              Height="292"
+                              Radius="138"
+                              InnerRadius="46"
+                              CenterLabel="COMMAND"
+                              SelectedIndex="1"
+                              OnSelectionChanged="RadialMenu_SelectionChanged"
+                              OnConfirm="RadialMenu_ItemActivated">
+                    <RadialMenuItem Label="Map" Icon="NavigationView" />
+                    <RadialMenuItem Label="Inventory" Icon="InventoryGrid" />
+                    <RadialMenuItem Label="Skills" Icon="Slider" />
+                    <RadialMenuItem Label="Quest" Icon="TextBlock" />
+                    <RadialMenuItem Label="Photo" Icon="Shape" />
+                    <RadialMenuItem Label="Exit" Icon="ContentDialog" />
+                </CommandWheel>
+                <TextBlock x:Name="RadialMenuOutput"
+                           Canvas.Left="390"
+                           Canvas.Top="132"
+                           Width="150"
+                           Text="Selected: Inventory"
+                           Foreground="#323130"
+                           TextWrapping="Wrap" />
+            </Canvas>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

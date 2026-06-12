@@ -1,0 +1,24 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="Expander" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="The Expander has a header and can expand to show a body with more content. Use an Expander when some content is only relevant some of the time." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="An Expander with text in the header and content areas" SourceCodeText="Source code" MinExampleHeight="168">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="28">
+                <Expander x:Name="DirectionExpander" Header="This text is in the header" Content="This text is in the content" Width="220" IsExpanded="True" ExpandDirection="Down" />
+                <ComboBox Header="ExpandDirection" Width="118" VisibleItems="2" SelectedIndex="0" OnSelectionChanged="ExpanderDirection_SelectionChanged">
+                    <x:String>Down</x:String>
+                    <x:String>Up</x:String>
+                    <x:String>Left</x:String>
+                    <x:String>Right</x:String>
+                </ComboBox>
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="Modifying Expander content alignment" SourceCodeText="Source code" MinExampleHeight="132">
+        <ControlExample.Example>
+            <Expander Header="This text is centered" Content="Centered content" Width="500" IsExpanded="False" HorizontalContentAlignment="Center" />
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

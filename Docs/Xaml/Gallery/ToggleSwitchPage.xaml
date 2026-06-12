@@ -1,0 +1,13 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="ToggleSwitch" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use ToggleSwitch controls to present users with exactly two mutually exclusive choices." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A basic ToggleSwitch" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <StackPanel Spacing="12">
+                <ToggleSwitch Header="Theme sync" IsOn="True" OnContent="On" OffContent="Off" />
+                <ToggleSwitch Header="Telemetry" IsOn="False" OnContent="Enabled" OffContent="Disabled" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

@@ -1,0 +1,13 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="TextBlock" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use TextBlock to display read-only text. FriendlyGUI supports basic measuring and wrapping for retained UI." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="Text wrapping" SourceCodeText="Source code" MinExampleHeight="170">
+        <ControlExample.Example>
+            <StackPanel Spacing="12">
+                <TextBlock Width="640" Text="This TextBlock wraps text when TextWrapping is set to Wrap. FriendlyGUI keeps retained text layout and renders through Dear ImGui / ImDrawList." Foreground="#201F1E" TextWrapping="Wrap" />
+                <TextBlock Width="640" Text="NoWrap keeps a single line." Foreground="#605E5C" TextWrapping="NoWrap" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

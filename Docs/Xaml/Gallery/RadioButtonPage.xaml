@@ -1,0 +1,35 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="RadioButton" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use RadioButton controls to let a user choose between mutually exclusive, related options." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A group of RadioButton controls in a RadioButtons group" SourceCodeText="Source code" MinExampleHeight="180">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="28">
+                <RadioButtons Header="Options:" SelectedIndex="0" OnSelectionChanged="OptionsRadioButtons_SelectionChanged">
+                    <RadioButton Content="Option 1" />
+                    <RadioButton Content="Option 2" />
+                    <RadioButton Content="Option 3" />
+                </RadioButtons>
+                <TextBlock x:Name="Control1Output" Width="180" Text="Option 1 selected." Foreground="#323130" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="Two RadioButtons groups that use string options" SourceCodeText="Source code" MinExampleHeight="240">
+        <ControlExample.Example>
+            <StackPanel Spacing="8">
+                <RadioButtons x:Name="BackgroundRadioButtons" Header="Background" Width="420" MaxColumns="3" SelectedIndex="0" OnSelectionChanged="BackgroundColor_SelectionChanged">
+                    <x:String>Green</x:String>
+                    <x:String>Yellow</x:String>
+                    <x:String>White</x:String>
+                </RadioButtons>
+                <RadioButtons x:Name="BorderRadioButtons" Header="Border" Width="420" MaxColumns="3" SelectedIndex="1" OnSelectionChanged="BorderBrush_SelectionChanged">
+                    <x:String>Green</x:String>
+                    <x:String>Yellow</x:String>
+                    <x:String>White</x:String>
+                </RadioButtons>
+                <Border x:Name="ControlOutput" Width="360" Height="50" Background="#FFFFFFFF" BorderBrush="#FFFFD700" BorderThickness="10" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

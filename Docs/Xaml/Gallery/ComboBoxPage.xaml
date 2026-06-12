@@ -1,0 +1,50 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="ComboBox" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use ComboBox to let people choose from a list of options." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A ComboBox with string items" SourceCodeText="Source code" MinExampleHeight="174">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="34">
+                <StackPanel Spacing="8">
+                    <ComboBox x:Name="Combo1" Width="200" Header="Colors" PlaceholderText="Pick a color" OnSelectionChanged="ColorComboBox_SelectionChanged">
+                        <x:String>Blue</x:String>
+                        <x:String>Green</x:String>
+                        <x:String>Red</x:String>
+                        <x:String>Yellow</x:String>
+                    </ComboBox>
+                    <Rectangle x:Name="Control1Output" Width="100" Height="30" Fill="#00000000" />
+                </StackPanel>
+                <TextBlock Width="520" Text="The selected color is represented by the rectangle below the ComboBox." Foreground="#323130" TextWrapping="Wrap" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A ComboBox with a preselected item" SourceCodeText="Source code" MinExampleHeight="136">
+        <ControlExample.Example>
+            <StackPanel Spacing="8">
+                <ComboBox x:Name="Combo2" Width="200" Header="Font" SelectedIndex="2" OnSelectionChanged="FontComboBox_SelectionChanged">
+                    <ComboBoxItem Content="Arial" />
+                    <ComboBoxItem Content="Consolas" />
+                    <ComboBoxItem Content="Segoe UI" />
+                    <ComboBoxItem Content="Verdana" />
+                </ComboBox>
+                <TextBlock x:Name="Control2Output" Width="420" Text="Selected font: Segoe UI" Foreground="#323130" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="An editable ComboBox" SourceCodeText="Source code" MinExampleHeight="150">
+        <ControlExample.Example>
+            <StackPanel Spacing="8">
+                <ComboBox x:Name="Combo3" Width="200" Header="Font Size" IsEditable="True" SelectedIndex="2" OnSelectionChanged="FontSizeComboBox_SelectionChanged">
+                    <x:String>12</x:String>
+                    <x:String>14</x:String>
+                    <x:String>18</x:String>
+                    <x:String>24</x:String>
+                    <x:String>32</x:String>
+                </ComboBox>
+                <TextBlock x:Name="Control3Output" Width="520" Text="You can type a value or choose one from the list." Foreground="#323130" FontSize="18" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

@@ -1,0 +1,20 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="NavigationViewItem" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use navigation items to build a left pane that lets players move between pages while preserving the app shell." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="Navigation items in a pane" SourceCodeText="Source code" MinExampleHeight="260">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="28">
+                <Border Width="280" Height="190" Padding="8" Background="#FAF4F1" BorderBrush="#E1DFDD" BorderThickness="1" CornerRadius="4">
+                    <StackPanel Spacing="2">
+                        <NavigationViewItem Content="Home" Icon="Button" Width="248" />
+                        <NavigationViewItem Content="Controls" Icon="Shape" Width="248" />
+                        <NavigationViewItem Content="Inventory" Icon="InventoryGrid" Width="248" />
+                        <NavigationViewItem Content="Settings" Icon="Slider" Width="248" />
+                    </StackPanel>
+                </Border>
+                <TextBlock Width="480" Text="FriendlyGUI keeps this as a normal retained control, so the same item can later drive gamepad focus, route changes and page transitions." Foreground="#323130" TextWrapping="Wrap" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

@@ -1,0 +1,116 @@
+<StackPanel Width="1500" Spacing="18">
+    <TextBlock Text="Color" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="The brushes below are part of the FriendlyGUI WinUI-inspired gallery. Use these color roles as a base for game UI themes, menus and settings screens." Foreground="#323130" TextWrapping="Wrap" />
+
+    <StackPanel Orientation="Horizontal" Spacing="22">
+        <TextBlock Text="Text" Foreground="#005FB8" />
+        <TextBlock Text="Fill" Foreground="#323130" />
+        <TextBlock Text="Stroke" Foreground="#323130" />
+        <TextBlock Text="Background" Foreground="#323130" />
+        <TextBlock Text="Signal" Foreground="#323130" />
+        <TextBlock Text="High Contrast" Foreground="#323130" />
+    </StackPanel>
+
+    <Border Width="1320" Height="116" HorizontalAlignment="Center" Padding="12" Background="#FFFFFF" BorderBrush="#E1E1E1" BorderThickness="1" CornerRadius="6">
+        <StackPanel Spacing="8">
+            <TextBlock Text="Text" Foreground="#201F1E" FontSize="20" />
+            <TextBlock Text="For UI labels and static text" Foreground="#605E5C" />
+            <TextBlock Text="Aa" Foreground="#201F1E" FontSize="34" HorizontalAlignment="Center" />
+        </StackPanel>
+    </Border>
+
+    <WrapPanel Width="1320" HorizontalAlignment="Center" Spacing="0" LineSpacing="0">
+        <Border Width="330" Height="104" Padding="12" Background="#1A1A1A" CornerRadius="4">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Text / Primary" Foreground="#FFFFFF" />
+                <TextBlock Text="Rest or Hover" Foreground="#F3F2F1" />
+                <TextBlock Text="TextFillColorPrimaryBrush" Foreground="#FFFFFF" />
+            </StackPanel>
+        </Border>
+        <Border Width="330" Height="104" Padding="12" Background="#6B6A69">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Text / Secondary" Foreground="#FFFFFF" />
+                <TextBlock Text="Rest or Hover" Foreground="#F3F2F1" />
+                <TextBlock Text="TextFillColorSecondaryBrush" Foreground="#FFFFFF" />
+            </StackPanel>
+        </Border>
+        <Border Width="330" Height="104" Padding="12" Background="#8A8886">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Text / Tertiary" Foreground="#FFFFFF" />
+                <TextBlock Text="Pressed only" Foreground="#F3F2F1" />
+                <TextBlock Text="TextFillColorTertiaryBrush" Foreground="#FFFFFF" />
+            </StackPanel>
+        </Border>
+        <Border Width="330" Height="104" Padding="12" Background="#A19F9D" CornerRadius="4">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Text / Disabled" Foreground="#201F1E" />
+                <TextBlock Text="Disabled only" Foreground="#323130" />
+                <TextBlock Text="TextFillColorDisabledBrush" Foreground="#201F1E" />
+            </StackPanel>
+        </Border>
+    </WrapPanel>
+
+    <Border Width="1320" Height="116" HorizontalAlignment="Center" Padding="12" Background="#FFFFFF" BorderBrush="#E1E1E1" BorderThickness="1" CornerRadius="6">
+        <StackPanel Spacing="8">
+            <TextBlock Text="Accent Text" Foreground="#201F1E" FontSize="20" />
+            <TextBlock Text="Recommended for links and important actions" Foreground="#605E5C" />
+            <TextBlock Text="Aa" Foreground="#005FB8" FontSize="34" HorizontalAlignment="Center" />
+        </StackPanel>
+    </Border>
+
+    <WrapPanel Width="1320" HorizontalAlignment="Center" Spacing="0" LineSpacing="0">
+        <Border Width="330" Height="104" Padding="12" Background="#005FB8" CornerRadius="4">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Accent Text / Primary" Foreground="#FFFFFF" />
+                <TextBlock Text="Rest or Hover" Foreground="#EAF6FF" />
+                <TextBlock Text="AccentTextFillColorPrimaryBrush" Foreground="#FFFFFF" />
+            </StackPanel>
+        </Border>
+        <Border Width="330" Height="104" Padding="12" Background="#003E92">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Accent Text / Secondary" Foreground="#FFFFFF" />
+                <TextBlock Text="Rest or Hover" Foreground="#EAF6FF" />
+                <TextBlock Text="AccentTextFillColorSecondaryBrush" Foreground="#FFFFFF" />
+            </StackPanel>
+        </Border>
+        <Border Width="330" Height="104" Padding="12" Background="#0078D4">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Accent Text / Tertiary" Foreground="#FFFFFF" />
+                <TextBlock Text="Pressed only" Foreground="#EAF6FF" />
+                <TextBlock Text="AccentTextFillColorTertiaryBrush" Foreground="#FFFFFF" />
+            </StackPanel>
+        </Border>
+        <Border Width="330" Height="104" Padding="12" Background="#A19F9D" CornerRadius="4">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Accent Text / Disabled" Foreground="#201F1E" />
+                <TextBlock Text="Disabled only" Foreground="#323130" />
+                <TextBlock Text="AccentTextFillColorDisabledBrush" Foreground="#201F1E" />
+            </StackPanel>
+        </Border>
+    </WrapPanel>
+
+    <Border Width="1320" Height="116" HorizontalAlignment="Center" Padding="12" Background="#0078D4" BorderBrush="#0078D4" BorderThickness="1" CornerRadius="6">
+        <StackPanel Spacing="8">
+            <TextBlock Text="Text On Accent" Foreground="#FFFFFF" FontSize="20" />
+            <TextBlock Text="Used for text on accent colored controls or fills" Foreground="#EAF6FF" />
+            <TextBlock Text="Aa" Foreground="#FFFFFF" FontSize="34" HorizontalAlignment="Center" />
+        </StackPanel>
+    </Border>
+
+    <WrapPanel Width="1320" HorizontalAlignment="Center" Spacing="0" LineSpacing="0">
+        <Border Width="660" Height="104" Padding="12" Background="#FFFFFF" BorderBrush="#E1E1E1" BorderThickness="1" CornerRadius="4">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Text on Accent / Primary" Foreground="#201F1E" />
+                <TextBlock Text="Rest or Hover" Foreground="#605E5C" />
+                <TextBlock Text="TextOnAccentFillColorPrimaryBrush" Foreground="#201F1E" />
+            </StackPanel>
+        </Border>
+        <Border Width="660" Height="104" Padding="12" Background="#F3F3F3" BorderBrush="#E1E1E1" BorderThickness="1" CornerRadius="4">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Text on Accent / Secondary" Foreground="#201F1E" />
+                <TextBlock Text="Pressed only" Foreground="#605E5C" />
+                <TextBlock Text="TextOnAccentFillColorSecondaryBrush" Foreground="#201F1E" />
+            </StackPanel>
+        </Border>
+    </WrapPanel>
+</StackPanel>

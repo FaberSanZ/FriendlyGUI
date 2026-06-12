@@ -1,0 +1,24 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="InfoBar" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use InfoBar to display app-wide status messages without blocking interaction." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="InfoBar severity states" SourceCodeText="Source code" MinExampleHeight="230">
+        <ControlExample.Example>
+            <StackPanel Spacing="10">
+                <InfoBar Width="640" Title="Informational" Message="The gallery is running with the FriendlyGUI renderer." Severity="Informational" IsClosable="True" />
+                <InfoBar Width="640" Title="Success" Message="Settings were saved successfully." Severity="Success" IsClosable="False" />
+                <InfoBar Width="640" Title="Warning" Message="Some features are still in preview." Severity="Warning" IsClosable="False" />
+                <InfoBar Width="640" Title="Error" Message="A required save file could not be loaded." Severity="Error" IsClosable="True" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="Compact InfoBar messages" SourceCodeText="Source code" MinExampleHeight="180">
+        <ControlExample.Example>
+            <StackPanel Spacing="8">
+                <InfoBar Width="420" Title="Saved" Message="Profile synced." Severity="Success" IsClosable="False" />
+                <InfoBar Width="420" Title="Offline" Message="Cloud features unavailable." Severity="Warning" IsClosable="True" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

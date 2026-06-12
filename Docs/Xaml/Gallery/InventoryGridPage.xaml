@@ -1,0 +1,27 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="InventoryGrid" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="InventoryGrid is a FriendlyGUI game-first control. It uses the same WinUI-like property names when possible, plus inventory-specific properties for slots and drag/drop." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A game inventory grid without image assets" SourceCodeText="Source code" MinExampleHeight="300">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="28" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <InventoryGrid Width="620" Height="205" SlotWidth="58" SlotHeight="58" Spacing="8" LineSpacing="8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AllowSwap="True" AllowMove="True" Background="#FFFFFF" Foreground="#F8FAFC" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="6">
+                    <InventoryItem Content="Aegis Cell MK III" QuantityText="x3" IsEmpty="False" Rarity="Rare" />
+                    <InventoryItem Content="Med Unit" QuantityText="x2" IsEmpty="False" Rarity="Common" />
+                    <InventoryItem Content="Drone Core" QuantityText="x1" IsEmpty="False" Rarity="Epic" />
+                    <InventoryItem Content="Empty" IsEmpty="True" />
+                    <InventoryItem Content="Shield Chip" QuantityText="x4" IsEmpty="False" Rarity="Rare" />
+                    <InventoryItem Content="Empty" IsEmpty="True" />
+                    <InventoryItem Content="Fuel Cell" QuantityText="x6" IsEmpty="False" Rarity="Common" />
+                    <InventoryItem Content="Empty" IsEmpty="True" />
+                </InventoryGrid>
+
+                <StackPanel Width="430" Spacing="8" VerticalAlignment="Center">
+                    <TextBlock Text="Default InventoryGrid slots" Foreground="#201F1E" FontSize="18" />
+                    <TextBlock Text="This first sample uses only FriendlyGUI native slot visuals: rarity borders, empty slots, quantity labels, hover, selection, pressed state and drag/drop. No texture renderer is attached here." Foreground="#605E5C" TextWrapping="Wrap" />
+                    <TextBlock Text="Drag one item over another slot to test swap/move behavior. The samples below show how a game can provide fully external visuals per item." Foreground="#605E5C" TextWrapping="Wrap" />
+                </StackPanel>
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

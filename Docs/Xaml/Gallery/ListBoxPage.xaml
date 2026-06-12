@@ -1,0 +1,20 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="ListBox" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use ListBox to display a list of items that users can select." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A ListBox with simple string items" SourceCodeText="Source code" MinExampleHeight="230">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="36">
+                <StackPanel Spacing="8">
+                    <ListBox x:Name="ListBox1" Width="200" Height="124" VisibleItems="4" OnSelectionChanged="ColorListBox_SelectionChanged">
+                        <x:String>Blue</x:String>
+                        <x:String>Green</x:String>
+                        <x:String>Red</x:String>
+                        <x:String>Yellow</x:String>
+                    </ListBox>
+                    <Rectangle x:Name="Control1Output" Width="100" Height="30" Fill="#00000000" />
+                </StackPanel>
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

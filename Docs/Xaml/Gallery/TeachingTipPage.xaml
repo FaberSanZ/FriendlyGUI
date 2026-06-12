@@ -1,0 +1,10 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="TeachingTip" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use TeachingTip to guide users toward a feature while keeping the current context visible." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A TeachingTip visual" SourceCodeText="Source code" MinExampleHeight="170">
+        <ControlExample.Example>
+            <TeachingTip Width="340" Title="Try the new inventory grid" Subtitle="Drag items between slots with mouse or gamepad focus navigation." IsOpen="True" />
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

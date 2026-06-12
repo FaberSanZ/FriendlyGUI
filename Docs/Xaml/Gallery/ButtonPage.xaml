@@ -1,0 +1,33 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="Button" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use Button controls to let people perform an immediate action." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A simple Button" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <Button Content="Standard button" Width="168" Height="36" />
+                <Button Content="Accent button" Width="168" Height="36" Style="{StaticResource AccentButtonStyle}" />
+                <Button Content="Disabled button" Width="168" Height="36" IsEnabled="False" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="Buttons with different widths" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <Button Content="Small" Width="96" Height="34" />
+                <Button Content="Medium action" Width="190" Height="34" />
+                <Button Content="Wide command button" Width="280" Height="34" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="Button with a control icon" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <Button Content="Open details" Width="180" Height="36" Icon="Button" />
+                <Button Content="Open settings" Width="190" Height="36" Icon="Slider" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

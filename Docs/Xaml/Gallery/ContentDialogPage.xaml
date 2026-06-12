@@ -1,0 +1,18 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="ContentDialog" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use ContentDialog to request confirmation or show important modal content." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A ContentDialog visual" SourceCodeText="Source code" MinExampleHeight="300">
+        <ControlExample.Example>
+            <ContentDialog Width="420" Height="190" IsOpen="True" Title="Delete save?" Content="This action cannot be undone." PrimaryButtonText="Delete" SecondaryButtonText="Cancel" Background="#FFFFFF" Foreground="#201F1E" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="8" />
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A ContentDialog with custom content" SourceCodeText="Source code" MinExampleHeight="320">
+        <ControlExample.Example>
+            <ContentDialog Width="520" Height="230" IsOpen="True" Title="Confirm deployment" PrimaryButtonText="Launch" SecondaryButtonText="Review" CloseButtonText="Cancel" Background="#FFFFFF" Foreground="#201F1E" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="8">
+                <TextBlock Width="440" Text="The squad will deploy with the selected loadout. You can still review equipment before starting the mission." Foreground="#323130" TextWrapping="Wrap" />
+            </ContentDialog>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

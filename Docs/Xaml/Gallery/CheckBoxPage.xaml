@@ -1,0 +1,14 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="CheckBox" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use CheckBox controls to let people select one or more options." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A group of CheckBox controls" SourceCodeText="Source code" MinExampleHeight="150">
+        <ControlExample.Example>
+            <StackPanel Spacing="8">
+                <CheckBox Content="Two-state CheckBox" Width="260" Height="32" IsChecked="True" />
+                <CheckBox Content="Three-state CheckBox" Width="260" Height="32" />
+                <CheckBox Content="Disabled CheckBox" Width="260" Height="32" IsEnabled="False" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

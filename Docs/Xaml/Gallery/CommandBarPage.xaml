@@ -1,0 +1,28 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="CommandBar" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use CommandBar to provide compact game/editor actions that stay visible near content." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A CommandBar with AppBarButton controls" SourceCodeText="Source code" MinExampleHeight="180">
+        <ControlExample.Example>
+            <CommandBar Width="560" Height="48">
+                <AppBarButton Label="Save" Icon="Button" Width="92" />
+                <AppBarButton Label="Load" Icon="ComboBox" Width="92" />
+                <AppBarSeparator />
+                <AppBarButton Label="Map" Icon="NavigationView" Width="92" />
+                <AppBarButton Label="Delete" Icon="ContentDialog" Width="110" />
+            </CommandBar>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A compact CommandBar" SourceCodeText="Source code" MinExampleHeight="180">
+        <ControlExample.Example>
+            <CommandBar Width="430" Height="48">
+                <AppBarButton Label="New" Icon="TextBox" Width="78" />
+                <AppBarButton Label="Pin" Icon="NavigationView" Width="78" />
+                <AppBarSeparator />
+                <AppBarButton Label="Share" Icon="Flyout" Width="90" />
+                <AppBarButton Label="More" Icon="CommandBar" Width="90" />
+            </CommandBar>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

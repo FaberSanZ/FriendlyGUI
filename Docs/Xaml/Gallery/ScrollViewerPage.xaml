@@ -1,0 +1,21 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="ScrollViewer" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use ScrollViewer to provide scrolling for content that is larger than the available display area." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A vertical ScrollViewer" SourceCodeText="Source code" MinExampleHeight="230">
+        <ControlExample.Example>
+            <ScrollViewer Width="320" Height="150" Background="#FFFFFF" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="4">
+                <StackPanel Padding="12" Spacing="8">
+                    <TextBlock Text="Mercury" Foreground="#201F1E" />
+                    <TextBlock Text="Venus" Foreground="#201F1E" />
+                    <TextBlock Text="Earth" Foreground="#201F1E" />
+                    <TextBlock Text="Mars" Foreground="#201F1E" />
+                    <TextBlock Text="Jupiter" Foreground="#201F1E" />
+                    <TextBlock Text="Saturn" Foreground="#201F1E" />
+                    <TextBlock Text="Uranus" Foreground="#201F1E" />
+                    <TextBlock Text="Neptune" Foreground="#201F1E" />
+                </StackPanel>
+            </ScrollViewer>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

@@ -1,0 +1,30 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="Shapes" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use shapes to draw simple vector primitives such as rectangles, ellipses and lines. These examples keep shapes inside panels so layout, centering and wrapping stay predictable." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="Basic shapes" SourceCodeText="Source code" MinExampleHeight="210">
+        <ControlExample.Example>
+            <Border Width="620" Height="150" HorizontalAlignment="Center" Padding="18" Background="#FFFFFF" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="6">
+                <WrapPanel Spacing="28" LineSpacing="12">
+                    <Rectangle Width="100" Height="64" RadiusX="8" RadiusY="8" Fill="#0078D4" Stroke="#005A9E" StrokeThickness="2" />
+                    <Ellipse Width="78" Height="78" Fill="#E81123" Stroke="#A80000" StrokeThickness="2" />
+                    <Line Width="140" Height="76" X1="8" Y1="64" X2="128" Y2="8" Stroke="#107C10" StrokeThickness="6" />
+                </WrapPanel>
+            </Border>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="Shape composition in a panel" SourceCodeText="Source code" MinExampleHeight="240">
+        <ControlExample.Example>
+            <Border Width="720" Height="180" HorizontalAlignment="Center" Padding="18" Background="#FFFFFF" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="6">
+                <WrapPanel Spacing="18" LineSpacing="18">
+                    <Rectangle Width="92" Height="92" RadiusX="14" RadiusY="14" Fill="#EAF6FF" Stroke="#0078D4" StrokeThickness="2" />
+                    <Ellipse Width="92" Height="92" Fill="#FFF4CE" Stroke="#FFB900" StrokeThickness="3" />
+                    <Rectangle Width="92" Height="92" RadiusX="46" RadiusY="46" Fill="#DFF6DD" Stroke="#107C10" StrokeThickness="3" />
+                    <Line Width="120" Height="92" X1="8" Y1="46" X2="112" Y2="46" Stroke="#5C2D91" StrokeThickness="8" />
+                    <Rectangle Width="120" Height="92" RadiusX="8" RadiusY="8" Fill="#F3E5F5" Stroke="#8E24AA" StrokeThickness="2" />
+                </WrapPanel>
+            </Border>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

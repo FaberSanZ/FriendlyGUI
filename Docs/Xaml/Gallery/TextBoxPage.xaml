@@ -1,0 +1,28 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="TextBox" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use TextBox controls to let people enter and edit text." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A simple TextBox" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <TextBox Width="320" />
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A TextBox with a header and placeholder text" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <TextBox Width="320" Header="Enter your name:" PlaceholderText="Name" />
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A read-only TextBox with various properties set" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <TextBox Width="420" Text="I am super excited to be here!" IsReadOnly="True" FontSize="24" Foreground="#5178BE" />
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A multi-line TextBox with text wrapping" SourceCodeText="Source code" MinExampleHeight="160">
+        <ControlExample.Example>
+            <TextBox Width="400" AcceptsReturn="True" TextWrapping="Wrap" PlaceholderText="Type multiple lines..." />
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

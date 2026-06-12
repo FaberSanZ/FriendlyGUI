@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Canvas Width="1280" Height="720" Background="#00000000">
+    <Border Style="{StaticResource ShellPanel}"
+            Canvas.Left="245"
+            Canvas.Top="78"
+            Width="790"
+            Height="560">
+
+        <StackPanel Orientation="Vertical" Spacing="14">
+            <TextBlock Text="INVENTORY / CARGO HOLD" Foreground="#B0F2FFFF" />
+            <TextBlock Text="InventoryGrid, ListBox, Button actions and styled cards loaded from FriendlyXAML files."
+                       Foreground="#DDE8F6FF"
+                       Width="700"
+                       TextWrapping="Wrap" />
+
+            <StackPanel Orientation="Horizontal" Spacing="18">
+                <Border Style="{StaticResource CardPanel}" Width="438" Height="360">
+                    <StackPanel Orientation="Vertical" Spacing="10">
+                        <InventoryGrid x:Name="CargoGrid"
+                                       Style="{StaticResource SciFiInventoryGrid}"
+                                       SlotWidth="58"
+                                       SlotHeight="58"
+                                       Spacing="8"
+                                       LineSpacing="8"
+                                       AllowSwap="true"
+                                       AllowMove="true">
+                            <InventoryItem Content="Aegis Cell MK III" QuantityText="x3" IsEmpty="false" StackCount="3" />
+                            <InventoryItem Content="Med Gel" QuantityText="x5" IsEmpty="false" StackCount="5" />
+                            <InventoryItem Content="Drone Core" QuantityText="x1" IsEmpty="false" StackCount="1" />
+                            <InventoryItem Content="Relay Key" QuantityText="x2" IsEmpty="false" StackCount="2" />
+                            <InventoryItem Content="Empty" IsEmpty="true" />
+                            <InventoryItem Content="Empty" IsEmpty="true" />
+                        </InventoryGrid>
+
+                        <Button Content="Equip Selected" Style="{StaticResource PrimaryButton}" Width="220" Height="38" OnClick="EquipSelectedCell" />
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource CardPanel}" Width="270" Height="360">
+                    <StackPanel Orientation="Vertical" Spacing="12">
+                        <TextBlock Text="TRANSFER LOG" Foreground="#FFE27AFF" />
+                        <ListBox Style="{StaticResource TacticalListBox}" Width="230" VisibleItems="7" SelectedIndex="0">
+                            <ListBoxItem Content="Aegis Cell inspected" />
+                            <ListBoxItem Content="Cargo mass +4.2kg" />
+                            <ListBoxItem Content="Cooling loop stable" />
+                            <ListBoxItem Content="Insurance seal active" />
+                            <ListBoxItem Content="Market demand high" />
+                            <ListBoxItem Content="No illegal tags found" />
+                            <ListBoxItem Content="Drone core verified" />
+                            <ListBoxItem Content="Relay key encrypted" />
+                        </ListBox>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Canvas>

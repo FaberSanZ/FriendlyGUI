@@ -1,0 +1,32 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="Flyout" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use Flyout to show lightweight contextual information anchored near a control." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A Flyout opened by a Button" SourceCodeText="Source code" MinExampleHeight="260">
+        <ControlExample.Example>
+            <StackPanel Spacing="10">
+                <Button Content="Open flyout" Width="140" Height="36" Style="{StaticResource AccentButtonStyle}" OnClick="ToggleFlyout" />
+                <Flyout x:Name="SampleFlyout" IsOpen="False" Width="300" Height="136" Background="#FFFFFF" Foreground="#201F1E" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="8" Padding="14">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="FriendlyGUI flyout" Foreground="#201F1E" FontSize="16" />
+                        <TextBlock Text="Click the button again to close this lightweight contextual panel." Width="260" Foreground="#605E5C" TextWrapping="Wrap" />
+                        <Button Content="Action inside flyout" Width="180" Height="32" />
+                    </StackPanel>
+                </Flyout>
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A Flyout menu surface" SourceCodeText="Source code" MinExampleHeight="260">
+        <ControlExample.Example>
+            <Flyout IsOpen="True" Width="300" Height="170" Background="#FFFFFF" Foreground="#201F1E" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="8" Padding="10">
+                <StackPanel Spacing="4">
+                    <Button Content="Copy loadout" Width="260" Height="32" />
+                    <Button Content="Share mission" Width="260" Height="32" />
+                    <Button Content="Open details" Width="260" Height="32" />
+                    <TextBlock Text="Flyouts are lightweight and should keep actions short." Width="260" Foreground="#605E5C" TextWrapping="Wrap" />
+                </StackPanel>
+            </Flyout>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

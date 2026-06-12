@@ -1,0 +1,20 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="Border" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use Border to draw a background, border, corner radius and padding around one child." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="Borders with different visual properties" SourceCodeText="Source code" MinExampleHeight="190">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="18">
+                <Border Width="180" Height="90" Padding="12" Background="#FFFFFF" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="4">
+                    <TextBlock Text="Simple" Foreground="#201F1E" />
+                </Border>
+                <Border Width="180" Height="90" Padding="12" Background="#E8F4FF" BorderBrush="#0078D4" BorderThickness="2" CornerRadius="12">
+                    <TextBlock Text="Rounded accent" Foreground="#201F1E" />
+                </Border>
+                <Border Width="180" Height="90" Padding="12" Background="#FFF4CE" BorderBrush="#F7630C" BorderThickness="2" CornerRadius="20">
+                    <TextBlock Text="Large radius" Foreground="#201F1E" />
+                </Border>
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

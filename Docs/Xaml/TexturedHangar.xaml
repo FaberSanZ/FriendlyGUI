@@ -1,0 +1,136 @@
+<Canvas Width="1280" Height="720" Background="#00000000">
+    <Border Style="{StaticResource ShellPanel}"
+            Canvas.Left="210"
+            Canvas.Top="86"
+            Width="860"
+            Height="548"
+            Padding="18"
+            BackgroundImage="panel_grey_bolts_dark"
+            BorderBrush="#74B6E8AA"
+            BorderThickness="1"
+            CornerRadius="18">
+        <Canvas Width="824" Height="512">
+            <Image Source="title" Canvas.Left="18" Canvas.Top="12" Width="150" Height="46" Tint="#FFFFFFFF" />
+
+            <TextBlock Text="XAML TEXTURED HANGAR"
+                       Canvas.Left="190"
+                       Canvas.Top="18"
+                       Width="380"
+                       Foreground="#B8F3FFFF" />
+            <TextBlock Text="Screen built from Docs/Xaml/TexturedHangar.xaml. Items use simple data templates, rarity frames, texture-backed buttons and gamepad-friendly retained navigation."
+                       Canvas.Left="190"
+                       Canvas.Top="44"
+                       Width="470"
+                       Foreground="#D6E2F0E8"
+                       TextWrapping="Wrap" />
+
+            <ProgressBar Style="{StaticResource SciFiProgressBar}"
+                         Canvas.Left="650"
+                         Canvas.Top="22"
+                         Width="140"
+                         Height="18"
+                         Minimum="0"
+                         Maximum="1"
+                         Value="0.78"
+                         FillImage="progress_blue"
+                         BackgroundImage="progress_blue_border" />
+
+            <Border Style="{StaticResource CardPanel}"
+                    Canvas.Left="18"
+                    Canvas.Top="92"
+                    Width="250"
+                    Height="354"
+                    BackgroundImage="panel_grey_dark">
+                <StackPanel Orientation="Vertical" Spacing="10">
+                    <TextBlock Text="MISSION QUEUE" Foreground="#FFD96AFF" />
+                    <ListBox Style="{StaticResource TacticalListBox}"
+                             ItemTemplate="IconBadge"
+                             Width="210"
+                             VisibleItems="7"
+                             SelectedIndex="1"
+                             SelectionImage="button_grey"
+                             HoverImage="scrollbar_grey_small">
+                        <ListBoxItem Content="Aegis convoy" Icon="minimap_icon_star_yellow" BadgeText="RARE" Foreground="#EAF7FFFF" />
+                        <ListBoxItem Content="Pirate beacon" Icon="minimap_icon_exclamation_red" BadgeText="HOT" Foreground="#FFE3E6FF" />
+                        <ListBoxItem Content="Signal cache" Icon="minimap_icon_jewel_yellow" BadgeText="LOOT" Foreground="#FFF2BDFF" />
+                        <ListBoxItem Content="Repair drone" Icon="hexagon_grey_green" BadgeText="SAFE" Foreground="#CFFFE1FF" />
+                        <ListBoxItem Content="Nebula pass" Icon="minimap_arrow_a" BadgeText="MAP" Foreground="#E4EDFFFF" />
+                        <ListBoxItem Content="Silent relay" Icon="hexagon_grey_red" BadgeText="RISK" Foreground="#FFD0D7FF" />
+                        <ListBoxItem Content="Crew contract" Icon="hexagon_grey" BadgeText="NEW" Foreground="#EAF7FFFF" />
+                    </ListBox>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardPanel}"
+                    Canvas.Left="292"
+                    Canvas.Top="92"
+                    Width="268"
+                    Height="354"
+                    BackgroundImage="panel_grid_blueprint">
+                <Canvas Width="230" Height="318">
+                    <Image Source="minimap_ring_grey_detail" Canvas.Left="30" Canvas.Top="26" Width="170" Height="170" Tint="#DDF5FFFF" />
+                    <Image Source="minimap_arrow_a" Canvas.Left="94" Canvas.Top="88" Width="42" Height="42" Tint="#FFFFFFFF" />
+                    <Image Source="minimap_icon_star_yellow" Canvas.Left="154" Canvas.Top="70" Width="22" Height="22" Tint="#FFFFFFFF" />
+                    <TextBlock Text="SECTOR MAP" Canvas.Left="24" Canvas.Top="222" Width="170" Foreground="#B8F3FFFF" />
+                    <TextBlock Text="Quest marker: 1.4km / Hostiles: 3 / Signal: 87%" Canvas.Left="24" Canvas.Top="248" Width="178" Foreground="#EDF6FFFF" TextWrapping="Wrap" />
+                </Canvas>
+            </Border>
+
+            <Border Style="{StaticResource CardPanel}"
+                    Canvas.Left="584"
+                    Canvas.Top="92"
+                    Width="218"
+                    Height="354"
+                    BackgroundImage="panel_grey_blue">
+                <StackPanel Orientation="Vertical" Spacing="11">
+                    <TextBlock Text="CARGO GRID" Foreground="#FFD96AFF" />
+                    <InventoryGrid Style="{StaticResource SciFiInventoryGrid}"
+                                   SlotTemplate="RarityFrame"
+                                   SlotWidth="50"
+                                   SlotHeight="50"
+                                   Spacing="8"
+                                   LineSpacing="8"
+                                   AllowSwap="true"
+                                   AllowMove="true"
+                                   SlotImage="round_grey_dark"
+                                   SlotHoverImage="round_grey"
+                                   SlotSelectedImage="round_grey">
+                        <InventoryItem Content="Aegis Cell MK III" Icon="hexagon_grey_green" QuantityText="x3" BadgeText="III" Rarity="Rare" Tint="#B8F3FFFF" IsEmpty="false" StackCount="3" />
+                        <InventoryItem Content="Drone Core" Icon="hexagon_grey" Rarity="Common" IsEmpty="false" />
+                        <InventoryItem Content="Red Relay" Icon="hexagon_grey_red" BadgeText="!" Rarity="Epic" Tint="#FFD0D7FF" IsEmpty="false" />
+                        <InventoryItem Content="Empty" IsEmpty="true" />
+                        <InventoryItem Content="Fuel Crystal" Icon="minimap_icon_jewel_yellow" QuantityText="x8" Rarity="Legendary" Tint="#FFF2BDFF" IsEmpty="false" StackCount="8" />
+                        <InventoryItem Content="Signal Key" Icon="minimap_icon_star_yellow" BadgeText="S" Rarity="Rare" IsEmpty="false" />
+                    </InventoryGrid>
+                    <Button Content="Equip Selected"
+                            Style="{StaticResource HangarButton}"
+                            Width="170"
+                            Height="38"
+                            OnClick="EquipSelectedCell" />
+                </StackPanel>
+            </Border>
+
+            <Button Content="Resume Mission"
+                    Style="{StaticResource HangarButton}"
+                    Canvas.Left="18"
+                    Canvas.Top="468"
+                    Width="190"
+                    Height="38"
+                    OnClick="ResumeMission" />
+            <Button Content="Open Settings"
+                    Style="{StaticResource HangarButton}"
+                    Canvas.Left="224"
+                    Canvas.Top="468"
+                    Width="190"
+                    Height="38"
+                    OnClick="OpenSettings" />
+            <Button Content="Exit"
+                    Style="{StaticResource HangarDangerButton}"
+                    Canvas.Left="430"
+                    Canvas.Top="468"
+                    Width="160"
+                    Height="38"
+                    OnClick="ExitToTitle" />
+        </Canvas>
+    </Border>
+</Canvas>

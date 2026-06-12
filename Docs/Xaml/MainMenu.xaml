@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Canvas Width="1280" Height="720" Background="#00000000">
+    <Border x:Name="MainMenuShell"
+            Style="{StaticResource ShellPanel}"
+            Canvas.Left="360"
+            Canvas.Top="92"
+            Width="560"
+            Height="540">
+
+        <StackPanel Orientation="Vertical" Spacing="14">
+            <TextBlock Text="TINY GUI / FRIENDLYXAML"
+                       Foreground="#B0F2FFFF"
+                       TextWrapping="Wrap" />
+
+            <TextBlock Text="Main menu screen loaded from Docs/Xaml/MainMenu.xaml. Styles come from Docs/Xaml/Styles.xaml."
+                       Foreground="#DDE8F6FF"
+                       Width="500"
+                       TextWrapping="Wrap" />
+
+            <Separator Orientation="Horizontal" ThicknessValue="1" LineColor="#78D9FF66" />
+
+            <Button Content="Resume Mission" Style="{StaticResource PrimaryButton}" Width="260" Height="42" OnClick="ResumeMission" />
+            <Button Content="Load Checkpoint" Style="{StaticResource MutedButton}" Width="260" Height="42" OnClick="LoadCheckpoint" />
+            <Button Content="Options" Style="{StaticResource MutedButton}" Width="260" Height="42" OnClick="OpenSettings" />
+            <Button Content="Exit To Title" Style="{StaticResource DangerButton}" Width="260" Height="42" OnClick="ExitToTitle" />
+
+            <TextBlock Text="Gamepad: D-Pad/left stick moves focus. A accepts. B cancels. LB/RB jumps focus."
+                       Foreground="#B8C7D8FF"
+                       Width="500"
+                       TextWrapping="Wrap" />
+        </StackPanel>
+    </Border>
+</Canvas>

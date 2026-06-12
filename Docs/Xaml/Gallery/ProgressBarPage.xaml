@@ -1,0 +1,27 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="ProgressBar" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use ProgressBar to show that a task is progressing." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="An indeterminate progress bar" SourceCodeText="Source code" MinExampleHeight="184">
+        <ControlExample.Example>
+            <StackPanel Spacing="14">
+                <ProgressBar x:Name="IndeterminateProgressBar" Width="130" IsIndeterminate="True" />
+                <RadioButtons Header="Progress state" Width="220" SelectedIndex="0" OnSelectionChanged="ProgressState_SelectionChanged">
+                    <RadioButton Content="Running" />
+                    <RadioButton Content="Paused" />
+                    <RadioButton Content="Error" />
+                </RadioButtons>
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A determinate progress bar" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="14">
+                <ProgressBar Width="130" Minimum="0" Maximum="100" Value="64" />
+                <TextBlock Width="60" Text="64%" Foreground="#323130" />
+                <TextBlock Text="Progress" Foreground="#323130" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

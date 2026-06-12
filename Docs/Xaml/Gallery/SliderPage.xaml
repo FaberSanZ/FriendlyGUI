@@ -1,0 +1,37 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="Slider" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use a Slider when users can set a value from a continuous range." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A simple Slider" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="18">
+                <Slider x:Name="Slider1" Width="220" Minimum="0" Maximum="100" Value="42" OnValueChanged="Slider1_ValueChanged" />
+                <TextBlock x:Name="Slider1Output" Width="110" Text="Value: 42" Foreground="#323130" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A Slider with range and steps specified" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="18">
+                <Slider x:Name="Slider2" Width="220" Header="Control header" Minimum="500" Maximum="1000" SmallChange="10" StepFrequency="10" Value="800" OnValueChanged="Slider2_ValueChanged" />
+                <TextBlock x:Name="Slider2Output" Width="120" Text="Value: 800" Foreground="#323130" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A Slider with tick marks" SourceCodeText="Source code">
+        <ControlExample.Example>
+            <StackPanel Orientation="Horizontal" Spacing="18">
+                <Slider x:Name="Slider3" Width="290" Minimum="0" Maximum="100" TickFrequency="20" TickPlacement="Outside" Value="60" OnValueChanged="Slider3_ValueChanged" />
+                <TextBlock x:Name="Slider3Output" Width="110" Text="Value: 60" Foreground="#323130" />
+            </StackPanel>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A vertical slider with range and tick marks specified" SourceCodeText="Source code" MinExampleHeight="180">
+        <ControlExample.Example>
+            <Slider Width="100" Height="120" Minimum="-50" Maximum="50" Orientation="Vertical" TickFrequency="10" TickPlacement="Outside" Value="10" />
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

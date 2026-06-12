@@ -1,0 +1,33 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="TabView" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use TabView to display a set of pages while preserving context." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A TabView with three tabs" SourceCodeText="Source code" MinExampleHeight="252">
+        <ControlExample.Example>
+            <TabView Width="720" Height="190" SelectedIndex="0" Background="#FFFFFF" Foreground="#201F1E" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="4">
+                <TabViewItem Header="Home">
+                    <TextBlock Width="520" Text="Home tab content loaded from FriendlyXAML." Foreground="#201F1E" TextWrapping="Wrap" />
+                </TabViewItem>
+                <TabViewItem Header="Settings">
+                    <TextBlock Width="520" Text="Settings tab content." Foreground="#201F1E" TextWrapping="Wrap" />
+                </TabViewItem>
+                <TabViewItem Header="About">
+                    <TextBlock Width="520" Text="About tab content." Foreground="#201F1E" TextWrapping="Wrap" />
+                </TabViewItem>
+            </TabView>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A TabView with add and close affordances" SourceCodeText="Source code" MinExampleHeight="252">
+        <ControlExample.Example>
+            <TabView Width="720" Height="190" SelectedIndex="0" IsAddTabButtonVisible="True" CanCloseTabs="True" Background="#FFFFFF" Foreground="#201F1E" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="4">
+                <TabViewItem Header="Document 1">
+                    <TextBlock Width="520" Text="Close this tab or add a new one with the plus button." Foreground="#201F1E" TextWrapping="Wrap" />
+                </TabViewItem>
+                <TabViewItem Header="Document 2">
+                    <TextBlock Width="520" Text="TabView keeps the selected content alive while switching." Foreground="#201F1E" TextWrapping="Wrap" />
+                </TabViewItem>
+            </TabView>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>

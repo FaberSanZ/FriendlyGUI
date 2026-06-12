@@ -1,0 +1,45 @@
+<StackPanel Width="1500" Spacing="20">
+    <TextBlock Text="TreeView" Foreground="#201F1E" FontSize="28" />
+    <TextBlock Width="980" Text="Use TreeView to display hierarchical data such as missions, inventory categories, save files or debug objects." Foreground="#323130" TextWrapping="Wrap" />
+
+    <ControlExample HeaderText="A TreeView with nested items" SourceCodeText="Source code" MinExampleHeight="300">
+        <ControlExample.Example>
+            <TreeView Width="360" Height="220" Background="#FFFFFF" Foreground="#201F1E" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="4" SelectedIndex="1">
+                <TreeViewItem Content="Mission Log" IsExpanded="True">
+                    <TreeViewItem Content="Primary objectives" IsExpanded="True">
+                        <TreeViewItem Content="Reach the relay" />
+                        <TreeViewItem Content="Restore shield link" />
+                    </TreeViewItem>
+                    <TreeViewItem Content="Optional objectives">
+                        <TreeViewItem Content="Recover cache" />
+                    </TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Content="Inventory" IsExpanded="True">
+                    <TreeViewItem Content="Weapons" />
+                    <TreeViewItem Content="Resources" />
+                </TreeViewItem>
+            </TreeView>
+        </ControlExample.Example>
+    </ControlExample>
+
+    <ControlExample HeaderText="A TreeView for game data" SourceCodeText="Source code" MinExampleHeight="330">
+        <ControlExample.Example>
+            <TreeView Width="420" Height="250" Background="#FFFFFF" Foreground="#201F1E" BorderBrush="#DADADA" BorderThickness="1" CornerRadius="4" SelectedIndex="2">
+                <TreeViewItem Content="Saves" IsExpanded="True">
+                    <TreeViewItem Content="Autosave 04:12" />
+                    <TreeViewItem Content="Hangar checkpoint" />
+                    <TreeViewItem Content="Boss arena" />
+                </TreeViewItem>
+                <TreeViewItem Content="Settings" IsExpanded="True">
+                    <TreeViewItem Content="Video" />
+                    <TreeViewItem Content="Audio" />
+                    <TreeViewItem Content="Controls" />
+                </TreeViewItem>
+                <TreeViewItem Content="Debug objects">
+                    <TreeViewItem Content="Player" />
+                    <TreeViewItem Content="Camera" />
+                </TreeViewItem>
+            </TreeView>
+        </ControlExample.Example>
+    </ControlExample>
+</StackPanel>
